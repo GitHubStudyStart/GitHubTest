@@ -1,0 +1,26 @@
+CLI简介
+CLI：Command-Line Interface,翻译为命令行界面，俗称脚手架。
+Vue CLI是一个官方发布vue.js项目脚手架
+使用vue-cli可以快速搭建vue开发环境以及对应的webpack配置
+
+vue cli安装 vue cli官网有教程
+安装新版本 脚手架3：
+npm install -g @vue/cli
+# OR
+yarn global add @vue/cli
+脚手架3创建项目
+vue create hello-world  	  // hello-world 项目名称
+
+拉取拉取 2.x 模板 (旧版本)
+npm install -g @vue/cli-init
+脚手架2创建项目命令
+vue init webpack my-project		//my-project项目名称
+
+创建runtime-compiler和创建runtime-only项目的区别
+1.runtime-compiler渲染过程
+template-> ast->render -> vdemo ->UI
+template-> ast解析的过程，render -> vdemo通过render函数渲染到虚拟demo, vdemo ->UI虚拟demo渲染到真实demo
+
+2.runtime-only渲染过程(1.性能更高，2.代码量变更少)  建议使用这种模式
+render -> vdemo ->UI
+render -> vdemo通过render函数渲染到虚拟demo, vdemo ->UI虚拟demo渲染到真实demo
